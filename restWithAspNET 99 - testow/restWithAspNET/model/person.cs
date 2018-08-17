@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace restWithAspNET.model
 {
-    public class person
+    public class persona
     {
         public long? id { get; set; }
         public string firstName { get; set; }

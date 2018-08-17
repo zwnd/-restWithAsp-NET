@@ -26,26 +26,26 @@ namespace restWithAspNET.Controllers
         [HttpGet("{id}")]
         public IActionResult Get(long id)
         {
-            var person = _personService.findbyId(id);
-            if (person == null) return NotFound();
-            return Ok(person);
+            var persona = _personService.findbyId(id);
+            if (persona == null) return NotFound();
+            return Ok(persona);
         }
 
         // POST api/values
         [HttpPost]
-        public IActionResult Post([FromBody]person person)
+        public IActionResult Post([FromBody]persona persona)
         {
            
-            if (person == null) return NotFound();
-            return new ObjectResult(_personService.Create(person));
+            if (persona == null) return NotFound();
+            return new ObjectResult(_personService.Create(persona));
         }
 
         // PUT api/values/5
         [HttpPut("{id}")]
-        public IActionResult Put([FromBody]person person)
+        public IActionResult Put([FromBody]persona persona)
         {
-            if (person == null) return NotFound();
-            return new ObjectResult(_personService.Update(person));
+            if (persona == null) return NotFound();
+            return new ObjectResult(_personService.Update(persona));
         }
 
         // DELETE api/values/5
